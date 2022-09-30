@@ -57,6 +57,10 @@ export class AuthComponent implements OnDestroy {
     form.reset();
   }
 
+  onHandleError() {
+    this.error = null;
+  }
+
   ngOnDestroy(): void {
     if (this.closeSub) {
       this.closeSub.unsubscribe();
